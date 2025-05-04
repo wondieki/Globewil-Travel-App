@@ -1,4 +1,3 @@
-# app.py
 from flask import Flask
 from flask_migrate import Migrate
 from flask_jwt_extended import JWTManager
@@ -16,16 +15,17 @@ def create_app():
     # JWT Cookies setup
     app.config["JWT_TOKEN_LOCATION"] = ["cookies"]
     app.config["JWT_ACCESS_COOKIE_NAME"] = "access_token_cookie"
-    app.config["JWT_COOKIE_SECURE"] = False           # Set to True only on HTTPS
+    app.config["JWT_COOKIE_SECURE"] = False  # Set to True in production with HTTPS
     app.config["JWT_COOKIE_SAMESITE"] = "Lax"
-    app.config["JWT_COOKIE_CSRF_PROTECT"] = False     # Disable for now
+    app.config["JWT_COOKIE_CSRF_PROTECT"] = False  # Disable CSRF for now
 
+    # Initialize extensions
     db.init_app(app)
     ma.init_app(app)
     jwt.init_app(app)
     migrate.init_app(app, db)
 
-    from models import user, service, booking, blog, message
+    from models import user, service, blog, booking, message
     for bp in all_blueprints:
         app.register_blueprint(bp)
 
