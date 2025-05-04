@@ -5,7 +5,7 @@ from flask_jwt_extended import jwt_required, get_jwt_identity
 
 messages_bp = Blueprint("messages", __name__)
 
-# ✅ Anyone can post a message
+# ✅ Anyone can send a message
 @messages_bp.route("/messages", methods=["POST"])
 def create_message():
     data = request.get_json()
@@ -24,7 +24,7 @@ def create_message():
         db.session.rollback()
         return jsonify({"error": str(e)}), 400
 
-# ✅ Admin-only: view all messages
+# ✅ Admin can view all messages
 @messages_bp.route("/messages", methods=["GET"])
 @jwt_required()
 def get_messages():
