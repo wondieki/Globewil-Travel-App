@@ -1,5 +1,5 @@
 from faker import Faker
-from random import choice
+from random import choice, sample
 from datetime import datetime
 from app import app
 from db import db
@@ -42,25 +42,28 @@ def seed_services():
 
 def seed_bookings(users, services):
     print("📅 Seeding Bookings...")
-    bookings = []
     for _ in range(10):
         user = choice(users)
-        service = choice(services)
+        selected_services = sample(services, k=2)
+
         booking = Booking(
             full_name=user.name,
             email=user.email,
             phone=fake.phone_number(),
             date=fake.future_date(end_date="+30d"),
             time=fake.time(),
-            type=service.name,
+            booking_type=choice([s.name for s in selected_services]),
             country=choice(["USA", "UK", "Canada", "Germany", "Netherlands", "France"]),
             notes=fake.sentence(),
-            referral=choice(["Google", "Instagram", "WhatsApp", "Friend/Referral", "Other"]),
-            user_id=user.id,
-            service_id=service.id
+            referral=choice(["Google", "Instagram", "WhatsApp", "Friend/Referral", "Other"])
         )
-        bookings.append(booking)
-    db.session.add_all(bookings)
+
+        db.session.add(booking)  # 🔑 Add to session first
+        db.session.flush()       # 🔑 Ensure it gets a DB identity (id) before relationships
+
+        booking.users.append(user)
+        booking.services.extend(selected_services)
+
     db.session.commit()
 
 def seed_blogs():

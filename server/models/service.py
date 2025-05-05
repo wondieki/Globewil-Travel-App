@@ -1,6 +1,5 @@
-# models/service.py
-
 from db import db
+from models.booking_service import booking_service  # 🔁 Import the association table
 
 class Service(db.Model):
     __tablename__ = 'services'
@@ -9,20 +8,20 @@ class Service(db.Model):
     name = db.Column(db.String(100), nullable=False)
     description = db.Column(db.Text)
 
-    # ✅ Relationship to bookings (with cascade delete)
+    # ✅ Many-to-many relationship with bookings
     bookings = db.relationship(
         'Booking',
-        backref='service',
-        lazy=True,
-        cascade="all, delete-orphan"
+        secondary=booking_service,
+        back_populates='services',
+        lazy='subquery'
     )
 
     def __repr__(self):
         return f"<Service {self.name}>"
 
-    def serialize(self):
+    def to_dict(self):
         return {
-            'id': self.id,
-            'name': self.name,
-            'description': self.description
+            "id": self.id,
+            "name": self.name,
+            "description": self.description
         }

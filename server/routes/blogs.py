@@ -20,9 +20,9 @@ def get_blogs():
         print("Error fetching blogs:", str(e))
         return jsonify({'error': 'Failed to fetch blogs'}), 500
 
-# ✅ GET one blog (now public for frontend CORS testing)
+# ✅ GET one blog (public)
 @blogs_bp.route('/blogs/<int:id>', methods=['GET'])
-def get_blog(id):  # 🔓 Made public by removing @jwt_required()
+def get_blog(id):
     try:
         blog = Blog.query.get_or_404(id)
         return jsonify(blog.serialize()), 200
