@@ -1,0 +1,40 @@
+# ========================
+# Global ignores
+# ========================
+*.log
+*.pyc
+__pycache__/
+.env
+.DS_Store
+
+# ========================
+# Flask (server/) ignores
+# ========================
+instance/
+*.sqlite3
+*.db
+.mypy_cache/
+.pytest_cache/
+
+# Flask virtual environment (if stored inside server/)
+server/venv/
+server/.venv/
+
+# ========================
+# React (client/) ignores
+# ========================
+client/node_modules/
+client/build/
+client/.env
+client/.DS_Store
+client/npm-debug.log*
+client/yarn-debug.log*
+client/yarn-error.log*
+
+# ========================
+# VSCode & OS-specific
+# ========================
+.vscode/
+Thumbs.db
+ehthumbs.db
+desktop.ini
