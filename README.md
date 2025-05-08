@@ -180,7 +180,7 @@ npm start
 
 **Developer:** Wilder Kerubo Ondieki
 **Business:** GlobeWil Travel Consultancy
-**Email:** [info.globewil@gmail.com.com](mailto:wkerubo28@gmail.com)
+**Email:** [info.globewil@gmail.com](mailto:wkerubo28@gmail.com)
 **Website:** [https://globewil.com](https://globewil.com)
 
 ---
