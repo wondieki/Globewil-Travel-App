@@ -103,3 +103,8 @@ def create_booking():
         db.session.rollback()
         print("❌ Error while saving booking:", str(e))
         return jsonify({"error": "Something went wrong. Please try again."}), 400
+
+    # except Exception as e:
+    #     db.session.rollback()
+    #     print("❌ Error while saving booking:", str(e))
+    #     return jsonify({"error": "Something went wrong. Please try again."}), 400
