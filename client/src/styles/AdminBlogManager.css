@@ -1,0 +1,38 @@
+.admin-blog-manager {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .create-blog-form {
+    background-color: #f8f8f8;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  }
+  
+  .create-blog-form input,
+  .create-blog-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+  }
+  
+  .create-blog-form button {
+    background-color: #e60023;
+    color: white;
+    padding: 0.7rem 1.2rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .create-blog-form button:hover {
+    background-color: #cc001f;
+  }
+  

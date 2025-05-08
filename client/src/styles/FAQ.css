@@ -1,0 +1,76 @@
+.faq-page {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+  }
+  
+  .faq-page h1 {
+    font-size: 2.5rem;
+    color: #c1121f;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .faq-list .faq-item {
+    margin-bottom: 25px;
+  }
+  
+  .faq-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: #c1121f;
+  }
+  
+  .faq-form-section {
+    margin-top: 50px;
+  }
+  
+  .faq-form-section h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+  }
+  
+  .faq-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .faq-form input,
+  .faq-form select,
+  .faq-form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  .faq-form textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+  
+  .faq-form button {
+    padding: 12px;
+    background-color: #c1121f;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .faq-form button:hover {
+    background-color: #a10f1a;
+  }
+  
+  .success-message {
+    color: green;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  

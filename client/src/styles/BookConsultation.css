@@ -1,0 +1,91 @@
+.consultation-page {
+    max-width: 700px;
+    margin: 60px auto;
+    padding: 40px 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+  }
+  
+  .consultation-page h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #c1121f;
+  }
+  
+  .consultation-page p {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+  }
+  
+  .success-message {
+    text-align: center;
+    color: green;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  
+  .consultation-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  
+  .consultation-form label {
+    font-weight: 600;
+    margin-bottom: 4px;
+    display: block;
+    color: #444;
+  }
+  
+  .consultation-form input,
+  .consultation-form select,
+  .consultation-form textarea {
+    padding: 12px 14px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .consultation-form textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+  
+  .consultation-form button {
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: #c1121f;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .consultation-form button:hover {
+    background-color: #a10f1a;
+  }
+  
+  /* Responsive tweaks */
+  @media (max-width: 600px) {
+    .consultation-page {
+      padding: 25px 15px;
+    }
+  
+    .consultation-page h1 {
+      font-size: 2rem;
+    }
+  
+    .consultation-form {
+      gap: 14px;
+    }
+  }
+  

@@ -1,0 +1,12 @@
+.home-container {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+section {
+  padding: 60px 20px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
