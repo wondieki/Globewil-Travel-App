@@ -22,7 +22,7 @@ const AboutUs = () => {
         </p>
         <p>
           Eventually, I stopped guessing and started researching, learning, and seeking guidance. I studied immigration requirements, analyzed patterns,
-          and practiced my interview responses. On my eighth attempt, with proper documentation, confident answers, and a well-prepared case—I was finally approved.
+          and practiced my interview responses. On my seventh attempt, with proper documentation, confident answers, and a well-prepared case—I was finally approved.
         </p>
         <p>
           That victory moment sparked something bigger in me.
@@ -47,8 +47,8 @@ const AboutUs = () => {
       <section className="about-section">
         <h2>A Traveler Who Gets It</h2>
         <p>
-          I haven’t just studied visa processes—I’ve lived them. To date, I’ve traveled to <strong>15 countries</strong>, including Tanzania, South Africa, Germany,
-          the Netherlands, Belgium, France, Switzerland, Italy, Monaco, Andorra, and Spain. Every trip has taught me something new, and I plan to explore even more in the future.
+          I haven’t just studied visa processes—I’ve lived them. To date, I’ve traveled to <strong>15 countries</strong>, including USA, Germany,
+          the Netherlands, Belgium, France, Switzerland, Italy, Monaco, Andorra, Spain, South Afica and Tanzania. Every trip has taught me something new, and I plan to explore even more in the future.
         </p>
         <p>
           That real-world experience helps me bring practical insights, not just theory. I understand both the paperwork and the emotions that come with international travel—
